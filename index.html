@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu Wargas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <p class="title">Menu Wargas</p>
+
+    <div class="tabs">
+      <button onclick="showMenu('makanan')">Makanan</button>
+      <button onclick="showMenu('minuman')">Minuman</button>
+    </div>
+
+    <div id="makanan" class="section">
+      <h2>Makanan</h2>
+      <div class="menu-item">
+        <span>Nasi Goreng</span>
+        <span>Rp 15.000</span>
+      </div>
+      <div class="menu-item">
+        <span>Mie Ayam</span>
+        <span>Rp 12.000</span>
+      </div>
+    </div>
+
+    <div id="minuman" class="section">
+      <h2>Minuman</h2>
+      <div class="menu-item">
+        <span>Es Teh</span>
+        <span>Rp 5.000</span>
+      </div>
+      <div class="menu-item">
+        <span>Jus Jeruk</span>
+        <span>Rp 8.000</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showMenu(id) {
+      document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tabs button').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
